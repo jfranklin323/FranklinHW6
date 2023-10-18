@@ -27,16 +27,16 @@ int main(int argc, char* argv[]){
 	string line;
 	
 	//create file names that concatenotes to the string file names
-	string readName = "/"+cmdr;
-	string writeName = "/"+cmdw;
+	string rName = "/"+cmdr;
+	string wName = "/"+cmdw;
 	
 	//declares strings and assign concatenation of file paths and file names
-	string readPath = FILE_PATH + rName;
-	string writePath = FILE_PATH + wName;
+	string rPath = FILE_PATH + rName;
+	string wPath = FILE_PATH + wName;
 	
 	//opens the files with the path names
-	fsr.open((readPath).c_str(), fstream::in);
-	fsw.open((writePath).c_str(), fstream::out);
+	fsr.open((rPath).c_str(), fstream::in);
+	fsw.open((wPath).c_str(), fstream::out);
 	
 	//loop to read file and to write file line by line
 	while(getline(fsr,line)){
